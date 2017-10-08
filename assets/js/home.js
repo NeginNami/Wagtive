@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-firebase.auth().onAuthStateChanged(user => {
+    firebase.auth().onAuthStateChanged(user => {
         // CHECK IF USER IS SIGNED IN
         if (user) {
             // CHECK IF SIGNED IN USERS EMAIL IS VERIFIED
@@ -9,6 +9,9 @@ firebase.auth().onAuthStateChanged(user => {
                 var uid = user.uid;
 
                 db.ref('users/' + uid).on('value', snapshot => {
+
+                    //FILLS OUT USERS PROFILE
+
                     var userFirst = snapshot.val().firstName;
                     var userLast = snapshot.val().lastName;
                     var email = snapshot.val().email;
@@ -19,11 +22,12 @@ firebase.auth().onAuthStateChanged(user => {
                     var loggedIn = true;
                     var verified = true;
 
-                    $('#nameSpan').text(userFirst + userLast)
-                    $('#level').text(' '+ level)
-                    $('#score').text(' '+ score)
-
+                    $('#nameSpan').text(userFirst + ' ' + userLast)
+                    $('#level').text(' ' + level)
+                    $('#score').text(' ' + score)
                 })
+
+                $('#profileImage').attr('src', user.photoURL)
 
             } else {
 
@@ -31,6 +35,8 @@ firebase.auth().onAuthStateChanged(user => {
             }
         } else {
 
+            //IF NOT LOGGED IN RETURN TO INDEX
+            
             location.replace('../Wagtive/index.html');
         }
     })

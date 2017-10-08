@@ -1,0 +1,31 @@
+{
+  "name": "wagtive",
+  "version": "1.0.0",
+  "description": "Pet Activity App",
+  "main": "photoUpload.js",
+  "scripts": {
+    "test": "console.log('hello world')"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NeginNami/Wagtive.git"
+  },
+  "keywords": [
+    "pets",
+    "profile",
+    "activity",
+    "social"
+  ],
+  "author": "Code Dragons",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NeginNami/Wagtive/issues"
+  },
+  "homepage": "https://github.com/NeginNami/Wagtive#readme",
+  "dependencies": {
+    "blueimp-file-upload": "^9.19.1",
+    "cloudinary-core": "^2.3.0",
+    "cloudinary-jquery-file-upload": "^2.3.0",
+    "jquery": "^3.2.1"
+  }
+}
