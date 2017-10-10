@@ -28,6 +28,8 @@ firebase.auth().onAuthStateChanged(user => {
             } else {
 
                 console.log("email not verified");
+                location.replace('../Wagtive/validate.html')
+
             }
         } else {
 

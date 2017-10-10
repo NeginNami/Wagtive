@@ -56,7 +56,7 @@ $(document).ready(function() {
                 firebase.auth().onAuthStateChanged(user => {
                     const promise = user.sendEmailVerification().then(function() {
                         console.log("Verification email sent");
-                        location.replace('../Wagtive/home.html');
+                        location.replace('../Wagtive/validate.html');
 
                     });
 
