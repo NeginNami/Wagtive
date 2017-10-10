@@ -94,3 +94,8 @@ input {
 #navMenu a:hover {
 	color: #0D90E6;
 }
+
+#message {
+	width: 50%;
+	margin: 5% auto;
+}
